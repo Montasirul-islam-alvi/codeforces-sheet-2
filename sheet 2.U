@@ -1,0 +1,21 @@
+# codeforces-sheet-2
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i,x,rem,digitsum,sum = 0,a,b;
+    cin>>n>>a>>b;
+    for(i=1;i<=n;i++){
+     x = i;
+    digitsum = 0;
+    while(x!=0){
+        rem = x%10;
+        digitsum += rem;
+        x /= 10;
+    }
+    if(digitsum >= a && digitsum <= b ){
+        sum += i;
+    }
+    }
+    cout<<sum<<endl;
+}
